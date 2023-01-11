@@ -14,21 +14,12 @@ const routes: RouteRecordRaw[] = [
   },
   {
     path: '/',
+    component: () => import('pages/Maintenance.vue')
+  },
+  {
+    path: '/testing',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      // {
-      //   path: '',
-      //   component: () => import('pages/AleoIndex.vue'),
-      //   meta: {
-      //     ShowHeaderAnnouncement: true,
-      //     ShowMainHeader: true,
-      //     ShowBigLogo: true,
-      //     ShowFooterTop: true,
-      //     ShowSignHelper: true,
-      //     ShowTopTip: false,
-      //     NeedLogined: false
-      //   }
-      // },
       {
         path: '',
         component: () => import('pages/Signin.vue'),
